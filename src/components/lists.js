@@ -3,7 +3,7 @@ import { TodoList } from "./todo-list";
 import { Header } from "./header";
 import { BtnAddList } from "./btn-add-list";
 import { Input } from "./notes-input";
-import "./lists.css"
+import "./lists.css";
 
 export const Lists = () => {
   const todoData = [
@@ -12,11 +12,11 @@ export const Lists = () => {
 
   return (
     <div className="lists">
-      <Header />
+      <Header title={"Заметки"}/>
       <div className="all-lists">
         <TodoList todos={todoData} />
       </div>
-      <Input />
+      <Input placeholder={"Новый список"}/>
       <BtnAddList />
     </div>
   );
