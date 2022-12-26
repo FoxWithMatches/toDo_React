@@ -15,10 +15,9 @@ const App = () => {
   return (
     <div>
       <AppHeader />
-      <SearchPanel />
-      <TodoList todos={todoData} />
+      {/* <TodoList todos={todoData} /> */}
   </div>
   );
 };
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('container'));
