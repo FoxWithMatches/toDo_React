@@ -1,0 +1,24 @@
+.btn-list {
+    position: absolute;
+    bottom: 4.4rem;
+    margin-top: 4.4rem;
+    background-color: transparent;
+    border: 0;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: #ccc;
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    transition: color linear .2s;
+}
+
+.btn-list:hover {
+    cursor: pointer;
+    color: #fff;
+}
+
+.svg-add {
+    width: 1.5rem;
+    margin-right: .5rem;
+}

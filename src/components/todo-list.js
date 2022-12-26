@@ -12,7 +12,7 @@ export const TodoList = ({ todos }) => {
           <ToDoListItem {...itemProps} />
         </p>
         <div className="nav-arrow">
-          <p></p>
+          <p className="num-item"></p>
           <div className="arrow"></div>
         </div>
       </button>
