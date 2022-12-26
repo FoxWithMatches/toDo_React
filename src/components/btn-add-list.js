@@ -4,7 +4,7 @@ import "./btn-add-lists.css"
 export const BtnAddList = () => {
   return (
     <button className="btn-list">
-      <img className="svg-add" src="./img/Union.svg" alt="add lists"></img>
+      <i class="fa-solid fa-plus svg-add"></i>
       <p>Добавить список</p>
     </button>
   );

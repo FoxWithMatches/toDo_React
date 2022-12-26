@@ -2,13 +2,12 @@ import React from "react";
 import { TodoList } from "./todo-list";
 import { Header } from "./header";
 import { BtnAddList } from "./btn-add-list";
+import { Input } from "./notes-input";
 import "./lists.css"
 
 export const Lists = () => {
   const todoData = [
     { label: "Общие", important: false, id: 1 },
-    { label: "Купить", important: true, id: 2 },
-    { label: "День Рождения", important: false, id: 3 },
   ];
 
   return (
@@ -17,6 +16,7 @@ export const Lists = () => {
       <div className="all-lists">
         <TodoList todos={todoData} />
       </div>
+      <Input />
       <BtnAddList />
     </div>
   );

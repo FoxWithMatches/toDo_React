@@ -7,25 +7,3 @@
     padding: 1rem;
 }
 
-.delete-img {
-    position: absolute;
-    right: 0;
-    cursor: pointer;
-    width: 1.5rem;
-    transform: rotate(45deg);
-    opacity: .2;
-    transition: opacity linear .2s;
-}
-
-.delete-img:hover {
-    opacity: 1;
-}
-
-.delete {
-    position: absolute;
-    top: 20%;
-    right: 0;
-    background-color: transparent;
-    border: none;
-    width: 100%;
-}

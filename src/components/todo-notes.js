@@ -1,6 +1,7 @@
 import React from "react";
 import { ToDoNotesItem } from "./todo-notes-item";
 import "./todo-notes.css"
+import { BtnDeleteNotes } from "./btn-delete-notes";
 
 export const NotesList = ({ todos }) => {
   const elements = todos.map((item) => {
@@ -9,13 +10,7 @@ export const NotesList = ({ todos }) => {
     return (
       <li key={id} className="notes-item">
         <ToDoNotesItem {...itemProps} />
-        <button className="delete">
-          <img
-            className="delete-img"
-            src="./img/Union.svg"
-            alt="delete button"
-          ></img>
-        </button>
+        <BtnDeleteNotes />
       </li>
     );
   });
