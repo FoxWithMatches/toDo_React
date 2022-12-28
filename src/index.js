@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { Reminders } from "./components/reminders.js";
+import Reminders from "./components/reminders";
 import "./style.css"
 
 const App = () => {

@@ -1,8 +1,8 @@
 import React from "react";
-import { TodoList } from "./todo-list";
-import { Header } from "./header";
-import { BtnAddList } from "./btn-add-list";
-import { Input } from "./notes-input";
+import TodoList from "../todo-list";
+import Header from "../header";
+import BtnAddList from "../btn-add-list";
+import Input from "../notes-input";
 import "./lists.css";
 
 export const Lists = () => {
