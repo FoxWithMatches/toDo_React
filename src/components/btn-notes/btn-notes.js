@@ -27,11 +27,11 @@ export class BtnAddNotes extends Component {
         <input
           type="text"
           className="notes-input"
-          placeholder="Новая заметка"
+          placeholder="..."
           onChange={this.onLabelChange}
           value={this.state.label}
         />
-        <button className="btn-notes">Добавить заметку</button>
+        <button className="btn-notes">Добавить</button>
       </form>
     );
   }
