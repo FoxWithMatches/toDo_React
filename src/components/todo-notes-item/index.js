@@ -1,2 +1,2 @@
-import { ToDoNotesItem } from "./todo-notes-item";
+import ToDoNotesItem from "./todo-notes-item";
 export default ToDoNotesItem;

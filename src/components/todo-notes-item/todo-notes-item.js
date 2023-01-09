@@ -1,8 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
+import "./btn-delete-notes.css"
 
-export const ToDoNotesItem = ({ label, important = false }) => {
-  const style = {
-    color: important ? "tomato" : "white",
+export default class ToDoNotesItem extends Component {
+  state = {
+    done: false,
+    important: false,
   };
-  return <span style={style}>{label}</span>;
-};
+  render() {
+    const { label, onDeleted } = this.props;
+    // const { done, important } = this.state;
+
+    return (
+      <div>
+        <span>{label}</span>
+        <button className="delete" onClick={onDeleted}>
+          <i className="fa-solid fa-plus delete-img"></i>
+        </button>
+      </div>
+    );
+  }
+}

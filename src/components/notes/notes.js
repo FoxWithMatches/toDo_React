@@ -4,15 +4,20 @@ import Input from "../notes-input";
 import BtnAddNotes from "../btn-notes";
 import Header from "../header";
 import "./notes.css";
-import NotesData from "../notes-data";
-
 
 export const Notes = () => {
+ const NotesData = [
+    { label: "Молоко", important: false, id: 1 },
+    { label: "Хлеб", important: false, id: 2 },
+    { label: "Сок", important: false, id: 3 },
+    { label: "Wine", important: false, id: 4 },
+  ];
 
   return (
     <div className="notes">
       <Header title={"Общие"}/>
-      <NotesList todos={NotesData} />
+      <NotesList todos={NotesData} 
+      onDeleted={(id) => console.log('del', id)}/>
       <Input placeholder={"Новая заметка"}/>
       <BtnAddNotes />
     </div>
