@@ -5,7 +5,6 @@ import Header from "../header";
 import "./notes.css";
 
 export default class Notes extends Component {
-
   maxId = 100;
 
   state = {
@@ -21,13 +20,10 @@ export default class Notes extends Component {
     this.setState(({ notesData }) => {
       const idx = notesData.findIndex((el) => el.id === id);
 
-      const newArr = [
-        ...notesData.slice(0, idx), 
-        ...notesData.slice(idx + 1)
-      ];
+      const newArr = [...notesData.slice(0, idx), ...notesData.slice(idx + 1)];
 
       return {
-        notesData: newArr
+        notesData: newArr,
       };
     });
   };
@@ -36,28 +32,24 @@ export default class Notes extends Component {
     const newItem = {
       label: text,
       important: false,
-      id: this.maxId++
-    }
+      id: this.maxId++,
+    };
 
-    this.setState(({notesData}) => {
-      const newArr = [
-        ...notesData,
-        newItem
-      ]
+    this.setState(({ notesData }) => {
+      const newArr = [...notesData, newItem];
 
       return {
-        notesData: newArr
-      }
-    })
-  }
+        notesData: newArr,
+      };
+    });
+  };
 
   render() {
     return (
       <div className="notes">
         <Header title={"Общие"} />
         <NotesList todos={this.state.notesData} onDeleted={this.deleteItem} />
-        <BtnAddNotes 
-        onItemAdded={this.addItem}/>
+        <BtnAddNotes onItemAdded={this.addItem} />
       </div>
     );
   }

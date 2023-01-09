@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./btn-notes.css";
+import "./notes-input.css";
 
 export class BtnAddNotes extends Component {
   state = {

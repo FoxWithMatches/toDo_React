@@ -2,14 +2,13 @@ import React from "react";
 import ToDoListItem from "../todo-list-item";
 import "./todo-list.css";
 
-export const TodoList = ({ todos, notesData }) => {
-  
+export const TodoList = ({ todos }) => {
   const elements = todos.map((item) => {
     const { id, ...itemProps } = item;
 
     return (
       <li key={id} className="list-item">
-        <p  className="text-item">
+        <p className="text-item">
           <ToDoListItem {...itemProps} />
         </p>
         <div className="nav-arrow">

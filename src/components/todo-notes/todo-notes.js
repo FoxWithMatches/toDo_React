@@ -8,9 +8,7 @@ export const NotesList = ({ todos, onDeleted }) => {
 
     return (
       <li key={id} className="notes-item">
-        <ToDoNotesItem {...itemProps} 
-        onDeleted= {() => onDeleted(id)}/>
-        
+        <ToDoNotesItem {...itemProps} onDeleted={() => onDeleted(id)} />
       </li>
     );
   });
