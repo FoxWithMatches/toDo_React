@@ -6,6 +6,9 @@ import Header from "../header";
 import "./notes.css";
 
 export default class Notes extends Component {
+
+  maxId = 100;
+
   state = {
     notesData: [
       { label: "Молоко", important: false, id: 1 },
@@ -30,13 +33,33 @@ export default class Notes extends Component {
     });
   };
 
+  addItem = (text) => {
+    const newItem = {
+      label: text,
+      important: false,
+      id: this.maxId++
+    }
+
+    this.setState(({notesData}) => {
+      const newArr = [
+        ...notesData,
+        newItem
+      ]
+
+      return {
+        notesData: newArr
+      }
+    })
+  }
+
   render() {
     return (
       <div className="notes">
         <Header title={"Общие"} />
         <NotesList todos={this.state.notesData} onDeleted={this.deleteItem} />
         <Input placeholder={"Новая заметка"} />
-        <BtnAddNotes />
+        <BtnAddNotes 
+        onItemAdded={this.addItem}/>
       </div>
     );
   }

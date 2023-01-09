@@ -17,6 +17,16 @@ body {
     color: #fff;
 }
 
+@media (max-width: 750px) {
+    .notes {
+        width: 100%;
+    }
+
+    .lists {
+        display: none;
+    }
+}
+
 
 
 
