@@ -6,15 +6,16 @@ import Input from "../notes-input";
 import "./lists.css";
 
 export const Lists = () => {
-  const todoData = [
+  const listData = [
     { label: "Общие", important: false, id: 1 },
+    { label: "New", important: false, id: 2 },
   ];
 
   return (
     <div className="lists">
       <Header title={"Заметки"}/>
       <div className="all-lists">
-        <TodoList todos={todoData} />
+        <TodoList todos={listData} />
       </div>
       <Input placeholder={"Новый список"}/>
       <BtnAddList />

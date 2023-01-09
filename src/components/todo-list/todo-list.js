@@ -1,5 +1,4 @@
 import React from "react";
-import NotesData from "../notes-data";
 import ToDoListItem from "../todo-list-item";
 import "./todo-list.css";
 
@@ -8,17 +7,17 @@ export const TodoList = ({ todos }) => {
     const { id, ...itemProps } = item;
 
     return (
-      <button className="list-item">
-        <p key={id} className="text-item">
+      <li key={id} className="list-item">
+        <p  className="text-item">
           <ToDoListItem {...itemProps} />
         </p>
         <div className="nav-arrow">
-          <p className="num-item">{NotesData.length}</p>
+          <p className="num-item"></p>
           <div className="arrow"></div>
         </div>
-      </button>
+      </li>
     );
   });
 
-  return <div>{elements}</div>;
+  return <ul className="all-notes">{elements}</ul>;
 };
