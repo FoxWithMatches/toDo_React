@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import NotesList from "../todo-notes";
-import Input from "../notes-input";
 import BtnAddNotes from "../btn-notes";
 import Header from "../header";
 import "./notes.css";
@@ -57,7 +56,6 @@ export default class Notes extends Component {
       <div className="notes">
         <Header title={"Общие"} />
         <NotesList todos={this.state.notesData} onDeleted={this.deleteItem} />
-        <Input placeholder={"Новая заметка"} />
         <BtnAddNotes 
         onItemAdded={this.addItem}/>
       </div>

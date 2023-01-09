@@ -2,7 +2,8 @@ import React from "react";
 import ToDoListItem from "../todo-list-item";
 import "./todo-list.css";
 
-export const TodoList = ({ todos }) => {
+export const TodoList = ({ todos, notesData }) => {
+  
   const elements = todos.map((item) => {
     const { id, ...itemProps } = item;
 

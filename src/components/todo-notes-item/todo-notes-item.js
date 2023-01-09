@@ -6,6 +6,7 @@ export default class ToDoNotesItem extends Component {
     done: false,
     important: false,
   };
+  
   render() {
     const { label, onDeleted } = this.props;
     // const { done, important } = this.state;

@@ -8,7 +8,6 @@ import "./lists.css";
 export const Lists = () => {
   const listData = [
     { label: "Общие", important: false, id: 1 },
-    { label: "New", important: false, id: 2 },
   ];
 
   return (
